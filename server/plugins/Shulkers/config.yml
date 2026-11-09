@@ -1,0 +1,61 @@
+# Config for Shulkers version 2.7
+# If you use this plugin as an API, please be cautious with internal classes
+# as reflection is being used in this plugin
+
+####################################
+############ CONFIG OPTIONS ########
+####################################
+
+# Option 1 - Disable persistent saving?
+# This option disables the saving of data across server restarts.
+# This is useful for worlds that are reset/deleted frequently (e.g., mini-games).
+DisablePeristentSaving: false
+
+# Option 2 - Allow players to craft Shulker Boxes?
+# Setting this to 'true' allows players to craft Shulker Boxes using the crafting table.
+AllowShulkerBoxCrafting: true
+
+# Option 3 - Allow players to dye Shulker Boxes?
+# This option allows players to dye Shulker Boxes with dye in their inventory.
+AllowShulkerBoxDyeing: true
+
+# Option 4 - Require players to have a specific permission to craft Shulker Boxes?
+# If enabled, only players with the specified permission can craft Shulker Boxes.
+RequirePermissionToCraft: false
+CraftShulkerBoxPermission: "shulkers.craft"  # The permission node required to craft Shulker Boxes.
+
+# Option 5 - Require players to have a specific permission to dye Shulker Boxes?
+# If enabled, only players with the specified permission can dye Shulker Boxes.
+RequirePermissionToDye: false
+DyeShulkerBoxPermission: "shulkers.dye"  # The permission node required to dye Shulker Boxes.
+
+# Option 6 - Disable Hopper interaction?
+# This option stops item transfers with Hopper(s) and Shulker Boxes.
+DisableHopperInteraction: false
+
+# Option 7 - Disable Redstone interaction?
+# This option stops Redstone Comparator(s) from interacting with Shulker Boxes.
+DisableRedstoneInteraction: false
+
+####################################
+############## DROPS ###############
+####################################
+
+# Shulker Box / Shulker Shell drops:
+# These settings control whether Shulker Boxes and Shulker Shells drop when certain mobs are killed.
+
+ShulkerDrops:
+
+  drops:
+    enabled: true  # Whether item drops are enabled or not (set to 'false' to disable all drops)
+
+    mobs: # List of mobs that can drop items and their respective drop chance (as a percentage)
+      ENDERMAN: 10  # 10% chance that Endermen will drop the configured items (Shulker Box / Shell)
+      # Example COW: 20 - 20% chance a Cow will drop the configured items
+
+
+    dropItems:
+      ShulkerBox: false  # Set to 'true' if you want Shulker Boxes to drop from mobs
+      ShulkerShell: true  # Set to 'true' if you want Shulker Shells to drop from mobs
+
+    useLooting: true # Set to 'true' if you want drops to be affected by the Looting enchantment
