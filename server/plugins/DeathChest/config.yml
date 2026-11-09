@@ -1,0 +1,52 @@
+# DeathChest Configuration File
+
+settings:
+  # The time in seconds before the death chest disappears or expires
+  # 5 hours = 18000 seconds
+  lifetime_seconds: 18000
+  
+  # Maximum active death chests a single player can have at once (0 = unlimited)
+  max_chests_per_player: 0
+  
+  # Time in seconds before other players can open the chest (0 = immediately unlocked)
+  unlock_seconds: 0
+  
+  # Worlds where the death chest feature is active. Leave empty [] for all worlds.
+  allowed_worlds: []
+
+chest:
+  # Save the player's experience points in the chest
+  store-xp: true
+  
+  # Percentage of XP to keep upon death (1.0 = 100%, 0.5 = 50%)
+  xp-percentage: 1.0
+
+protection:
+  # Prevent TNT and Creeper explosions from destroying the chest
+  explosion-proof: true
+  
+  # Prevent hoppers from stealing items out of the chest
+  hopper-proof: true
+  
+  # Prevent pistons from moving the chest
+  piston-proof: true
+  
+  # Protect the chest from being destroyed by lava
+  lava-safe: true
+
+# Action taken when the 5-hour timer expires: DROP_ITEMS or DELETE_ITEMS
+expiry-action: DROP_ITEMS
+
+visuals:
+  # Enable floating text above the death chest
+  hologram-enabled: true
+  
+  # Enable particle effects around the chest location
+  particles-enabled: true
+
+hologram:
+  # Text lines displayed above the chest (supports color codes like &c, &e)
+  lines:
+    - "&c&l{playerName}'s Death Chest"
+    - "&eReason: &f{cause}"
+    - "&eExpires in: &b{time}"
